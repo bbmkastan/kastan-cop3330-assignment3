@@ -10,8 +10,6 @@ class App {
 }
 
 class nameSorter {
-- listOfNames: ArrayList
-
 + sort()
 + getSortedNames()
 }
