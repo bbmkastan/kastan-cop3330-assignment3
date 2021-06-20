@@ -3,6 +3,17 @@
 !includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
 'https://plantuml.com/class-diagram
 
+package classes_used_in_multiple_packages {
+class FileReader {
+- filePath: string
++ setFilePath(newFilePath)
++ getFilePath()
++ getStrings()
++ readFile()
+}
+}
+
+package ex41.base {
 class App {
 + main()
 + generateOutputString()
@@ -10,16 +21,15 @@ class App {
 }
 
 class nameSorter {
-+ sort()
++ sort(names)
 + getSortedNames()
 }
 
-class FileReader {
-
-+ getStrings()
-+ readFile()
+file "exercise41_input.txt" {
+}
 }
 
 App o--> nameSorter
 nameSorter o--> FileReader
+FileReader o--> exercise41_input.txt
 @enduml

@@ -1,4 +1,4 @@
-package ex41.base;
+package classes_used_in_multiple_packages;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,10 +7,19 @@ import java.util.Scanner;
 
 public class FileReader {
 
+    private static String filePath;
+
+    public void setFilePath(String newFilePath) {
+        filePath = newFilePath;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
     public ArrayList<String> getStrings() throws FileNotFoundException {
         // create Arraylist String
         // Store path to file in String to use
-        String filePath = "src/main/java/ex41/base/exercise41_input.txt";
         //store readFile method(path) in Array list;
         // return Arraylist
         return readFile(filePath);
@@ -31,3 +40,4 @@ public class FileReader {
         return strings;
     }
 }
+

@@ -1,0 +1,53 @@
+@startuml
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+'https://plantuml.com/class-diagram
+
+package classes_used_in_multiple_packages {
+class FileReader {
+- filePath: string
++ setFilePath(newFilePath)
++ getFilePath()
++ getStrings()
++ readFile()
+}
+}
+
+
+package ex42.base {
+class App {
++ main()
++ generateOutputString()
+}
+
+class DataParser {
++ getParsedData()
++ ParseData()
+}
+
+class Person {
+- firstName: string
+- lastName: string
+- salary: string
+--
++ getFirstName()
++ getLastName()
++ getSalary()
+..
++ setFirstName(newFirstName)
++ setLastName(newLastName)
++ setSalary(newSalary)
+}
+
+file "exercise42_input.txt" {
+}
+}
+
+App o--> Person
+App o--> DataParser
+DataParser o--> Person
+DataParser o--> FileReader
+FileReader o--> exercise42_input.txt
+
+
+@enduml

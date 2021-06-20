@@ -5,6 +5,8 @@ package ex41.base;
  *  Copyright 2021 Bao Kastan
  */
 
+import classes_used_in_multiple_packages.FileReader;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,6 +14,8 @@ public class NameSorter {
     public ArrayList<String> getSortedNames() throws Exception {
         // create instance of FileReader Class
         FileReader fileReader = new FileReader();
+        // Tell FileReader the file path
+        fileReader.setFilePath("src/main/java/ex41/base/exercise41_input.txt");
         // use FileReader to get an Arraylist and store it
         ArrayList<String> names = fileReader.getStrings();
         // call sort method to sort arraylist and return that
