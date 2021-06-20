@@ -1,5 +1,10 @@
 package classes_used_in_multiple_packages;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Bao Kastan
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

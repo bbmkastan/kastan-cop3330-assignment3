@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+package ex43.base {
+class App {
++ main()
++ generateOutputString()
++ getUserInput()
+}
+
+class websiteGenerator {
++ makeWebsiteFolder(siteName, folderPath)
++ makeHtmlFile(siteName, authorName)
++ makeJSFolder()
++ makeCSSFolder()
+}
+}
+
+App o--> websiteGenerator
+
+
+@enduml

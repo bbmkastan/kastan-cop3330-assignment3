@@ -1,5 +1,10 @@
 package ex42.base;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Bao Kastan
+ */
+
 public class Person {
     private String firstName;
     private String lastName;

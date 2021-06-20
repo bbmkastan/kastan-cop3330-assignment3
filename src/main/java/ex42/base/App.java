@@ -1,5 +1,10 @@
 package ex42.base;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Bao Kastan
+ */
+
 import java.util.ArrayList;
 
 public class App {
@@ -20,9 +25,9 @@ public class App {
             outputString += "-";
         }
         outputString += "\n";
-        for (int i = 0; i < parsedData.size(); ++i) {
-            outputString += String.format("%-10s%-10s%s\n",parsedData.get(i).getLastName(),
-                    parsedData.get(i).getFirstName(),parsedData.get(i).getSalary());
+        for (Person parsedDatum : parsedData) {
+            outputString += String.format("%-10s%-10s%s\n", parsedDatum.getLastName(),
+                    parsedDatum.getFirstName(), parsedDatum.getSalary());
         }
         return  outputString;
     }
