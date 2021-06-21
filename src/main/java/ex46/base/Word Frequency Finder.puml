@@ -1,0 +1,48 @@
+@startuml
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+'https://plantuml.com/class-diagram
+
+package classes_used_in_multiple_packages {
+class FileReader {
+- filePath: string
++ setFilePath(newFilePath)
++ getFilePath()
++ getStrings()
++ readFile()
+}
+}
+
+
+package ex46.base {
+class App {
++ main()
++ generateOutputString()
+}
+
+class WordFrequencyFinder {
++ getFrequency()
+}
+
+class Word {
+- word: string
+- frequency: int
++ setWord(newWord)
++ getWord()
++ increaseFrequency()
++ setFrequency(newFrequency)
++ getFrequency()
+}
+
+file "exercise46_input.txt" {
+}
+}
+
+App o--> Word
+App o--> WordFrequencyFinder
+WordFrequencyFinder o--> FileReader
+WordFrequencyFinder o--> Word
+FileReader o--> exercise46_input.txt
+
+
+@enduml
