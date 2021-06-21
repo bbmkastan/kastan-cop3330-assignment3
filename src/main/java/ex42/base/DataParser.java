@@ -7,7 +7,6 @@ package ex42.base;
 
 import classes_used_in_multiple_packages.FileReader;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class DataParser {

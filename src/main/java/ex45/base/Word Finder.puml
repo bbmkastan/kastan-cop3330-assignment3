@@ -1,0 +1,37 @@
+@startuml
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+'https://plantuml.com/class-diagram
+
+package classes_used_in_multiple_packages {
+class FileReader {
+- filePath: string
++ setFilePath(newFilePath)
++ getFilePath()
++ getStrings()
++ readFile()
+}
+}
+
+
+package ex45.base {
+class App {
++ main()
+}
+
+class TextManipulator {
++ generateNewFile(title ,content)
++ replaceUtilizeWithUse()
++ getStringFromArrayList)
+}
+
+file "exercise45_input.txt" {
+}
+}
+
+App --> TextManipulator
+TextManipulator o--> FileReader
+FileReader o--> exercise45_input.txt
+
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+package ex44.base {
+class App {
++ main()
++ generateOutputString()
++ getUserInput()
+}
+
+
+
+
+
+@enduml
